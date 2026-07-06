@@ -32,12 +32,24 @@ const handleextraspacesClick =() =>{
     setText(newText);
     props.showAlert("Extra spaces removed", "success");
 }
-const speak = () => { 
-    let msg = new SpeechSynthesisUtterance();// yy javscript ka built in function hai jo text ko speech me convert krta hai
-     msg.text = text;
-      window.speechSynthesis.speak(msg); // yy function ko call krta hai jo speech ko play krta hai
+const speak = () => {
 
+    if (!text.trim()) {
+        alert("Please enter some text first");
+        return;
     }
+
+    window.speechSynthesis.cancel();
+
+    const msg = new SpeechSynthesisUtterance(text);
+
+    msg.lang = "en-US";
+    msg.rate = 1;
+    msg.pitch = 1;
+    msg.volume = 1;
+
+    window.speechSynthesis.speak(msg);
+}
     const [text, setText] = useState("Enter text here2"); 
    
   return (
