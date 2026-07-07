@@ -1,0 +1,43 @@
+.text-card{
+    /* background: white; */
+    border-radius:20px;
+    padding:35px;
+    box-shadow:0 8px 25px rgba(0,0,0,.15);
+    margin-top:35px;
+    transition:.3s;
+}
+
+.text-card:hover{
+    transform:translateY(-5px);
+}
+
+.dark-card{
+    background:#052743;
+    color:white;
+}
+
+.hero-title{
+    font-size:50px;
+    font-weight:700;
+}
+
+.hero-subtitle{
+    color:gray;
+    margin-bottom:25px;
+}
+
+.dark-card .hero-subtitle{
+    color:#d6d6d6;
+}
+
+textarea{
+
+    border-radius:15px !important;
+
+}
+
+textarea:focus{
+
+box-shadow:0 0 15px rgba(13,110,253,.4)!important;
+
+}

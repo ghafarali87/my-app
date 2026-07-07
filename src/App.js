@@ -1,10 +1,10 @@
 import './App.css';
-// import About from './components/About';
+//import About from './components/About';
 import Navbar from './components/Navbar';
 import Textform from './components/Textform';
 import Alert from './components/Alert';
 import React, { useState } from 'react';
-// import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+//import { Routes, Route } from "react-router-dom";
 
 
 function App() {
@@ -20,7 +20,7 @@ function App() {
     }, 1500);
   }
 
-  const [mode, setMode] = useState('light');
+  const [mode, setMode] = useState('light'); // whether dark mode is enabled or not
 
   const togglemode = () => {
 
@@ -63,11 +63,11 @@ function App() {
                   showAlert={showAlert}
                 />
         </div>
-{/* 
-          <Routes>
-            <Route path="/about" element={<About mode={mode} />} /> */}
 
-            {/* <Route
+          {/* <Routes>
+            <Route path="/about" element={<About mode={mode} />} />
+
+            <Route
               path="/"
               element={
                 <Textform
@@ -77,10 +77,10 @@ function App() {
                 />
               }
             />
-          </Routes> */}
+          </Routes>
   
 
-      {/* </Router> */}
+      </Router> */}
     </>
   );
 }
